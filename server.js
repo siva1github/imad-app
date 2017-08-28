@@ -95,18 +95,18 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool('config');
-var err;
-var result;
+
 app.get('/test-db', function(req,res){
    //make a select request
    pool.query('SELECT * FROM test', function(err, result){
-   });
+
    //return a response with the results
-   if (err) {
-      res.status(500).send(err.tostring());
-    }else{
-        res.send(JSON.stringify(result));
-    }
+       if (err) {
+          res.status(500).send(err.tostring());
+        }else{
+            res.send(JSON.stringify(result));
+        }
+   });
 });
 var counter=0;
 app.get('/counter',function(req, res){
