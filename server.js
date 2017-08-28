@@ -6,7 +6,7 @@ var config = {
     user: 'gsrkpr',
     database: 'gsrkpr',
     host: 'db.imad.hasura-app.io',
-    port: '80',
+    port: '5432',
     password: process.env.DB_PASSWORD
 };
 var app = express();
@@ -102,7 +102,7 @@ app.get('/test-db', function(req,res){
 
    //return a response with the results
        if (err) {
-          res.status(500).send(err.tostring());
+          res.status(500).send(err.toString());
         }else{
             res.send(JSON.stringify(result));
         }
