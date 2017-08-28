@@ -95,6 +95,8 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool('config');
+var err;
+var result;
 app.get('/test-db', function(req,res){
    //make a select request
    pool.query('SELECT * FROM test', function(err, result){
