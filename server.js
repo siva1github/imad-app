@@ -6,7 +6,7 @@ var config = {
     user: 'gsrkpr',
     database: 'gsrkpr',
     host: 'db.imad.hasura-app.io', 
-    port: 5432,
+    port: '5432',
     password: 'db-gsrkpr-52692'
 };
 var app = express();
