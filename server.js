@@ -46,7 +46,7 @@ var articles = {
         date: "Aug 11, 2017",
         content: `
         <p>
-            This is the content of second article.
+            This is the content of third article.
         </p>`   
     }
 };
