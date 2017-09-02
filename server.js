@@ -105,9 +105,14 @@ function hash(input, salt){
     //"password-this-is-random-string" -> hvh88ffhfhdfsdd98fhhsffsdkjf;
     //"password" -> "password-this-is-random-string" -> <hash> -> <hash>x10k times
 }
+
 app.get('/hash/:input',function (req, res) {
     var hashedString=hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
+});
+
+app.get('/create-user',function (req, res) {
+
 });
 
 var pool = new Pool(config);
