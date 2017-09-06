@@ -1,5 +1,3 @@
-
-
 //submit username/password tp login
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
